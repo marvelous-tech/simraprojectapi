@@ -1,0 +1,1 @@
+web: gunicorn simraprojectapi.deploy_wsgi
