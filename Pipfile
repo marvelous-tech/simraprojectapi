@@ -11,6 +11,7 @@ djangorestframework = "*"
 gunicorn = "*"
 whitenoise = "*"
 dj-database-url = "*"
+pymysql = "*"
 
 [requires]
 python_version = "3.8"
