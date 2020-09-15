@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "dokku": {
+      "postdeploy": "python manage.py makemigrations --settings=simraprojectapi.deploy_settings --no-input && python manage.py migrate --settings=simraprojectapi.deploy_settings"
+    }
+  }
+}
