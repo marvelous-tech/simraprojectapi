@@ -121,3 +121,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+"""Project Settings"""
+
+INSTALLED_APPS += [
+    'appointment',
+    'user',
+    'utils'
+]
