@@ -12,7 +12,7 @@ class Appointment(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
-    token = models.CharField(auto_created=True, default=random_string, max_length=10, editable=False)
+    token = models.CharField(auto_created=True, default=random_string, max_length=10, editable=False, unique=True)
 
     def __str__(self):
         return self.token
