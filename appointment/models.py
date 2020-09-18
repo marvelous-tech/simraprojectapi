@@ -1,5 +1,5 @@
 from django.db import models
-from user.models import Doctor, Patient
+from user.models import Doctor, Patient, Receptionist
 from django.utils import timezone
 
 from utils import random_string
@@ -8,6 +8,7 @@ from utils import random_string
 class Appointment(models.Model):
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE, related_name='appointments')
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, related_name='appointments')
+    receptionist = models.ForeignKey(Receptionist, on_delete=models.CASCADE, related_name='appointments')
     scheduled = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
